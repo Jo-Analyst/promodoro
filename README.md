@@ -1,4 +1,4 @@
-# promodoro
+# pomodoro
 
 A new Flutter project.
 
