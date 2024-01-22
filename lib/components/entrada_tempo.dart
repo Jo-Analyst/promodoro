@@ -4,11 +4,15 @@ import 'package:flutter/material.dart';
 class EntradaTempo extends StatelessWidget {
   final int valor;
   final String titulo;
+  final void Function()? inc;
+  final void Function()? dec;
 
   const EntradaTempo({
     Key? key,
-    required this.titulo,
     required this.valor,
+    required this.titulo,
+    this.inc,
+    this.dec,
   }) : super(key: key);
 
   @override
@@ -25,7 +29,7 @@ class EntradaTempo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: dec,
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 backgroundColor: Colors.red,
@@ -41,7 +45,7 @@ class EntradaTempo extends StatelessWidget {
               style: const TextStyle(fontSize: 18),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: inc,
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 backgroundColor: Colors.red,

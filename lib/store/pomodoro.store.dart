@@ -27,6 +27,6 @@ abstract class _PomodoroStore with Store {
 
   @action
   void decrementarTempoDescanso() {
-    tempoTrabalho--;
+    tempoDescanso--;
   }
 }
